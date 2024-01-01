@@ -1049,30 +1049,6 @@ func (msg *Message) TLSPeerCertificateErrors() gio.TLSCertificateFlags {
 	return _tlsCertificateFlags
 }
 
-// TLSProtocolVersion gets the TLS protocol version negotiated
-// for msg's connection. If the message connection is not SSL,
-// G_TLS_PROTOCOL_VERSION_UNKNOWN is returned.
-//
-// The function returns the following values:
-//
-//   - tlsProtocolVersion: ProtocolVersion.
-//
-func (msg *Message) TLSProtocolVersion() gio.TLSProtocolVersion {
-	var _arg0 *C.SoupMessage        // out
-	var _cret C.GTlsProtocolVersion // in
-
-	_arg0 = (*C.SoupMessage)(unsafe.Pointer(coreglib.InternObject(msg).Native()))
-
-	_cret = C.soup_message_get_tls_protocol_version(_arg0)
-	runtime.KeepAlive(msg)
-
-	var _tlsProtocolVersion gio.TLSProtocolVersion // out
-
-	_tlsProtocolVersion = gio.TLSProtocolVersion(_cret)
-
-	return _tlsProtocolVersion
-}
-
 // URI gets msg's URI.
 //
 // The function returns the following values:
