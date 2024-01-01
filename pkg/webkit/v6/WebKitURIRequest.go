@@ -8,7 +8,7 @@ import (
 
 	"github.com/diamondburned/gotk4/pkg/core/gextras"
 	coreglib "github.com/diamondburned/gotk4/pkg/core/glib"
-	"github.com/diamondburned/gotk4/pkg/soup/v3"
+	"github.com/diamondburned/gotk4-webkitgtk/pkg/soup/v3"
 )
 
 // #include <stdlib.h>
